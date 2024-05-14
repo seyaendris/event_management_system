@@ -1,4 +1,4 @@
-'use server'
+"use server";
 
 import { revalidatePath } from 'next/cache'
 
@@ -11,13 +11,14 @@ import { handleError } from '@/lib/utils'
 import { CreateUserParams, UpdateUserParams } from '@/types'
 
 export async function createUser(user: CreateUserParams) {
-  try {
-    await connectToDatabase()
+  try { 
+    await connectToDatabase();
 
-    const newUser = await User.create(user)
-    return JSON.parse(JSON.stringify(newUser))
+    const newUser = await User.create(user);
+    return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
-    handleError(error)
+    handleError(error);
+    console.log(error);
   }
 }
 
