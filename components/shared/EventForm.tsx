@@ -18,6 +18,9 @@ import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Checkbox } from "@/components/ui/checkbox"
+import { useUploadThing } from '@/lib/uploadthing'
+import { useRouter } from "next/navigation";
+import { createEvent } from "@/lib/actions/event.actions";
 
 
 type EventFormProps = {
@@ -31,6 +34,10 @@ const EventForm = ({userId, type}: EventFormProps) => {
     const [files, setFiles] = useState<File[]>([])
     const initialValues = eventDefaultValues;
 
+    const router = useRouter();
+
+    const { startUpload } = useUploadThing('imageUploader');
+
 
     const form = useForm<z.infer<typeof EventFormSchema>>({
         resolver: zodResolver(EventFormSchema),
@@ -38,10 +45,35 @@ const EventForm = ({userId, type}: EventFormProps) => {
       })
      
       // 2. Define a submit handler.
-      function onSubmit(values: z.infer<typeof EventFormSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+      async function onSubmit(values: z.infer<typeof EventFormSchema>) {
+        let uploadedImageUrl = values.imageUrl;
+
+        if(files.length > 0) {
+          const uploadedImages = await startUpload(files)
+    
+          if(!uploadedImages) {
+            return
+          }
+    
+          uploadedImageUrl = uploadedImages[0].url
+        }
+
+        if(type === 'Create') {
+          try {
+            const newEvent = await createEvent({
+              event: { ...values, imageUrl: uploadedImageUrl },
+              userId,
+              path: '/profile'
+            })
+    
+            if(newEvent) {
+              form.reset();
+              router.push(`/events/${newEvent._id}`)
+            }
+          } catch (error) {
+            console.log(error);
+          }
+        }
       }
 
   return (
@@ -85,7 +117,7 @@ const EventForm = ({userId, type}: EventFormProps) => {
         render={({ field }) => (
           <FormItem className="w-full">
             {/* <FormLabel>Description</FormLabel> */}
-            <FormControl className="h-52">
+            <FormControl className="h-72">
               <Textarea placeholder="Description" {...field} className="textarea rounded-2xl" />
             </FormControl>
             <FormMessage />
@@ -256,7 +288,7 @@ const EventForm = ({userId, type}: EventFormProps) => {
                         height={24}
                       />
 
-                      <Input placeholder="URL" {...field} className="input-field" />
+                      <Input placeholder="If it is Online provide a URL" {...field} className="input-field" />
                     </div>
 
                   </FormControl>
