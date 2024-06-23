@@ -28,7 +28,9 @@ export type CreateUserParams = {
       categoryId: string
       price: string
       isFree: boolean
-      url: string
+      url?: string
+      isVip: boolean
+      vipPrice?: string
     }
     path: string
   }
