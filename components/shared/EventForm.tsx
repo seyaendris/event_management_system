@@ -152,7 +152,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-grey-50 px-4 py-2">
                     <Image
                         src="/assets/icons/location-grey.svg"
                         alt="calendar"
@@ -175,7 +175,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-grey-50 px-4 py-2">
                     <Image
                         src="/assets/icons/calendar.svg"
                         alt="calendar"
@@ -204,7 +204,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-grey-50 px-4 py-2">
                     <Image
                         src="/assets/icons/calendar.svg"
                         alt="calendar"
@@ -236,7 +236,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                   <FormControl>
-                  <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                  <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-grey-50 px-4 py-2">
                       <Image
                           src="/assets/icons/dollar.svg"
                           alt="dollar"
@@ -263,7 +263,7 @@ return (
                           checked={field.value}
                           disabled={priceValue > 0}
                           id="isFree"
-                          className="mr-2 h-5 w-5 border-2 border-primary-500"
+                          className="mr-2 h-5 w-5 border-2 border-orange-800"
                       />
                           </div>
                           </FormControl>
@@ -283,7 +283,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-grey-50 px-4 py-2">
                     <Image
                         src="/assets/icons/link.svg"
                         alt="link"
@@ -314,7 +314,7 @@ return (
                       onCheckedChange={field.onChange}
                       checked={field.value}
                       id="isVip"
-                      className="mr-2 h-5 w-5 border-2 border-orange-800"
+                      className="mr-2 h-5 w-5 border-2 border-orange-800 accent-orange-500"
                   />
               </div>
               </FormControl>
@@ -329,7 +329,7 @@ return (
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
+                <div className="flex-center h-[54px] w-full overflow-hidden rounded-lg bg-gray-50 px-4 py-2">
                     <Image src="/assets/icons/dollar.svg" alt="link" width={24} height={24} />
                     <Input type="number" placeholder="VIP Ticket Price" {...field} className="input-field" />
                 </div>
@@ -345,7 +345,7 @@ return (
             type="submit"
             size="lg"
             disabled={form.formState.isSubmitting}
-            className="button col-span-2 w-full"
+            className="button col-span-2 w-full bg-orange-500 hover:bg-orange-600"
         >
             {form.formState.isSubmitting ? 'Submitting...' : `${type} Event `}
         </Button>
