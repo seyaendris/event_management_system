@@ -90,7 +90,9 @@ export type CreateUserParams = {
     location: string
     startDateTime: Date
     endDateTime: Date
-    url: string
+    url?: string
+    isVip: boolean
+    vipPrice?: string
     organizer: {
       _id: string
       firstName: string
@@ -113,6 +115,8 @@ export type CreateUserParams = {
     eventId: string
     price: string
     isFree: boolean
+    isVip: boolean
+    vipPrice?: string
     buyerId: string
   }
   
