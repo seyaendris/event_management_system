@@ -12,7 +12,7 @@ const CreateEvent = () => {
         <h3 className="wrapper h3-bold text-center sm:text-left">Create Event</h3>
     </section>
 
-    <div className="wrapper my-8 drop-shadow-lg">
+    <div className="wrapper my-8 drop-shadow-md">
       <EventForm userId={userId} type="Create" />
     </div>
 </>
