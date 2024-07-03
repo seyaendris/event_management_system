@@ -93,15 +93,15 @@ export const handleError = (error: unknown) => {
   throw new Error(typeof error === 'string' ? error : JSON.stringify(error))
 }
 
-export const initializeChapa = async (data: any) => {
-  const CHAPA_SECRET_KEY = process.env.CHAPA_SECRET_KEY;
+// export const initializeChapa = async (data: any) => {
+//   const CHAPA_SECRET_KEY = process.env.CHAPA_SECRET_KEY;
 
-  const response = await axios.post('https://api.chapa.co/v1/transaction/initialize', data, {
-    headers: {
-      Authorization: `Bearer ${CHAPA_SECRET_KEY}`,
-      'Content-Type': 'application/json',
-    },
-  });
+//   const response = await axios.post('https://api.chapa.co/v1/transaction/initialize', data, {
+//     headers: {
+//       Authorization: `Bearer ${CHAPA_SECRET_KEY}`,
+//       'Content-Type': 'application/json',
+//     },
+//   });
 
-  return response.data;
-};
+//   return response.data;
+// };
