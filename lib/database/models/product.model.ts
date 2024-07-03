@@ -19,4 +19,4 @@ const ProductSchema = new Schema<IProduct>({
 
 const Product = models.Product || model('Product', ProductSchema);
 
-export default Event;
+export default Product;

@@ -103,6 +103,72 @@ export type CreateUserParams = {
       name: string
     }
   }
+
+  // ====== PACKAGE PARAMS
+  export type CreatePackageParams = {
+    userId: string
+    package: {
+      name: string;
+      description?: string;
+      price: string;
+      includedServices: string,
+    }
+    path: string
+  }
+
+  export type UpdatePackageParams = {
+    userId: string
+    package: {
+      name: string;
+      description?: string;
+      price: string;
+      includedServices: string,
+    }
+    path: string
+  }
+
+  export type DeletePackageParams = {
+    packageId: string
+    path: string
+  }
+
+  export type GetAllPackagesParams = {
+    query: string
+    category: string
+    limit: number
+    page: number
+  }
+
+  export type GetPackagesByUserParams = {
+    userId: string
+    limit?: number
+    page: number
+  }
+
+  export type GetRelatedPackagesByCategoryParams = {
+    categoryId: string
+    packageId: string
+    limit?: number
+    page: number | string
+  }
+
+  export type Package = {
+    _id: string
+    name: string
+    description: string
+    price: string
+    includedServices: string,
+    vendor: {
+      _id: string
+      firstName: string
+      lastName: string
+    }
+    category: {
+      _id: string
+      name: string
+    }
+  }
+
   
   // ====== CATEGORY PARAMS
   export type CreateCategoryParams = {

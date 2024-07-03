@@ -6,6 +6,7 @@ export interface IPackage extends Document {
   description?: string;
   price: string;
   includedServices: string,
+  category: { _id: string, name: string };
   vendor: { _id: string; firstName: string; lastName: string };
 }
 
@@ -14,9 +15,10 @@ const PackageSchema = new Schema<IPackage>({
   description: { type: String },
   price: { type: String },
   includedServices: { type: String },
+  category: { type: Schema.Types.ObjectId, ref: 'PackageCategory' },
   vendor: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
 const Package = models.Package || model('Package', PackageSchema);
 
-export default Event;
+export default Package;
