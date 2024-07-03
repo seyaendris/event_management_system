@@ -246,12 +246,12 @@ export type CreateUserParams = {
 
    // ====== PACKAGECATEGORY PARAMS
    export type CreatePackageCategoryParams = {
-    categoryName: string
+    packageCategoryName: string
   }
 
    // ====== PRODUCTCATEGORY PARAMS
    export type CreateProductCategoryParams = {
-    categoryName: string
+    productCategoryName: string
   }
   
   // ====== ORDER PARAMS
