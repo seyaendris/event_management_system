@@ -107,7 +107,7 @@ export type CreateUserParams = {
   // ====== PACKAGE PARAMS
   export type CreatePackageParams = {
     userId: string
-    package: {
+    packages: {
       name: string;
       description?: string;
       price: string;
@@ -119,7 +119,8 @@ export type CreateUserParams = {
 
   export type UpdatePackageParams = {
     userId: string
-    package: {
+    packages: {
+      _id: string
       name: string;
       description?: string;
       price: string;
@@ -154,7 +155,7 @@ export type CreateUserParams = {
     page: number | string
   }
 
-  export type Package = {
+  export type Packages = {
     _id: string
     name: string
     description: string
@@ -187,6 +188,7 @@ export type CreateUserParams = {
     export type UpdateProductParams = {
       userId: string
       package: {
+        _id: string
         name: string;
         description?: string;
         price: string;

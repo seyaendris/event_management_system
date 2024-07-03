@@ -19,6 +19,6 @@ const PackageSchema = new Schema<IPackage>({
   vendor: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
-const Package = models.Package || model('Package', PackageSchema);
+const Packages = models.Packages || model('Packages', PackageSchema);
 
-export default Package;
+export default Packages;
