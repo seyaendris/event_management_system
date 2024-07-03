@@ -111,6 +111,7 @@ export type CreateUserParams = {
       name: string;
       description?: string;
       price: string;
+      packageCategoryId: string
       includedServices: string,
     }
     path: string
@@ -122,6 +123,7 @@ export type CreateUserParams = {
       name: string;
       description?: string;
       price: string;
+      packageCategoryId: string
       includedServices: string,
     }
     path: string
@@ -169,9 +171,86 @@ export type CreateUserParams = {
     }
   }
 
+    // ====== PRODUCT PARAMS
+    export type CreateProductParams = {
+      userId: string
+      product: {
+        name: string;
+        description?: string;
+        price: string;
+        ProductCategoryId: string
+        contactInfo: string,
+      }
+      path: string
+    }
+  
+    export type UpdateProductParams = {
+      userId: string
+      package: {
+        name: string;
+        description?: string;
+        price: string;
+        ProductCategoryId: string
+        includedServices: string,
+      }
+      path: string
+    }
+  
+    export type DeleteProductParams = {
+      productId: string
+      path: string
+    }
+  
+    export type GetAllProductsParams = {
+      query: string
+      productCategory: string
+      limit: number
+      page: number
+    }
+  
+    export type GetProductsByUserParams = {
+      userId: string
+      limit?: number
+      page: number
+    }
+  
+    export type GetRelatedProductsByCategoryParams = {
+      productCategoryId: string
+      productId: string
+      limit?: number
+      page: number | string
+    }
+  
+    export type Product = {
+      _id: string
+      name: string
+      description: string
+      price: string
+      includedServices: string,
+      vendor: {
+        _id: string
+        firstName: string
+        lastName: string
+      }
+      productCategory: {
+        _id: string
+        name: string
+      }
+    }
+
   
   // ====== CATEGORY PARAMS
   export type CreateCategoryParams = {
+    categoryName: string
+  }
+
+   // ====== PACKAGECATEGORY PARAMS
+   export type CreatePackageCategoryParams = {
+    categoryName: string
+  }
+
+   // ====== PRODUCTCATEGORY PARAMS
+   export type CreateProductCategoryParams = {
     categoryName: string
   }
   
