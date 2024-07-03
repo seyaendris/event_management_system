@@ -6,6 +6,7 @@ export interface IProduct extends Document {
   description?: string;
   price: string;
   contactInfo: string,
+  productCategory: { _id: string, name: string };
   vendor: { _id: string; firstName: string; lastName: string };
 }
 
@@ -14,6 +15,7 @@ const ProductSchema = new Schema<IProduct>({
   description: { type: String },
   price: { type: String },
   contactInfo: { type: String },
+  productCategory: { type: Schema.Types.ObjectId, ref: 'ProductCategory' },
   vendor: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 

@@ -134,7 +134,7 @@ export type CreateUserParams = {
 
   export type GetAllPackagesParams = {
     query: string
-    category: string
+    packageCategory: string
     limit: number
     page: number
   }
@@ -146,7 +146,7 @@ export type CreateUserParams = {
   }
 
   export type GetRelatedPackagesByCategoryParams = {
-    categoryId: string
+    packageCategoryId: string
     packageId: string
     limit?: number
     page: number | string
@@ -163,7 +163,7 @@ export type CreateUserParams = {
       firstName: string
       lastName: string
     }
-    category: {
+    packageCategory: {
       _id: string
       name: string
     }

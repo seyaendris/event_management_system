@@ -9,6 +9,6 @@ const PackageCategorySchema = new Schema({
   name: { type: String, required: true, unique: true },
 })
 
-const PackageCategory = models.Category || model('Category', PackageCategorySchema);
+const PackageCategory = models.PackageCategory || model('PackageCategory', PackageCategorySchema);
 
 export default PackageCategory;
