@@ -16,6 +16,25 @@ export const headerLinks = [
       route: '/vendors'
     }
   ]
+
+  export const vendorHeaderLinks = [
+    {
+      label: 'Home',
+      route: '/',
+    },
+    {
+      label: 'Create Package',
+      route: '/vendors/create',
+    },
+    {
+      label: 'My Profile',
+      route: '/profile',
+    },
+    {
+      label: 'Vendors',
+      route: '/vendors'
+    }
+  ]
   
   export const eventDefaultValues = {
     title: '',
