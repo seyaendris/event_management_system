@@ -187,7 +187,7 @@ export type CreateUserParams = {
   
     export type UpdateProductParams = {
       userId: string
-      package: {
+      product: {
         _id: string
         name: string;
         description?: string;

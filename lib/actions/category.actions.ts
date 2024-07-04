@@ -5,7 +5,7 @@ import { handleError } from "../utils"
 import { connectToDatabase } from "../database"
 import Category from "../database/models/category.model"
 import PackageCategory from "../database/models/packagecategory.model"
-import ProductCategory from "../database/models/productcategory"
+import ProductCategory from "../database/models/productcategory.model"
 
 export const createCategory = async ({ categoryName }: CreateCategoryParams) => {
   try {
