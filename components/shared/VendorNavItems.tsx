@@ -46,7 +46,7 @@ const VendorNavItems = () => {
             <Link
               href="/vendors"
               className={`hover:text-orange-600 font-medium text-base ${
-                activeLink === "/vendors" ? "text-orange-600" : ""
+                activeLink === "/packages" ? "text-orange-600" : ""
               }`}
               onClick={() => handleLinkClick("/packages")}
             >
