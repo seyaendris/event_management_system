@@ -13,7 +13,7 @@ export const headerLinks = [
     },
     {
       label: 'Vendors',
-      route: '/vendors'
+      route: '/products'
     }
   ]
 
