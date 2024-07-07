@@ -27,6 +27,20 @@ const VendorNavItems = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        <NavigationMenuItem className="pr-3">
+          <NavigationMenuLink asChild>
+            <Link
+              href="/vendors"
+              className={`hover:text-orange-600 font-medium text-base ${
+                activeLink === "/products" ? "text-orange-600" : ""
+              }`}
+              onClick={() => handleLinkClick("/vendors")}
+            >
+              Products
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
@@ -34,9 +48,9 @@ const VendorNavItems = () => {
               className={`hover:text-orange-600 font-medium text-base ${
                 activeLink === "/vendors" ? "text-orange-600" : ""
               }`}
-              onClick={() => handleLinkClick("/vendors")}
+              onClick={() => handleLinkClick("/packages")}
             >
-              Vendors
+              Packages
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
