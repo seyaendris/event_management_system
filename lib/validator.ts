@@ -14,3 +14,11 @@ export const eventFormSchema = z.object({
   isVip: z.boolean(),
   vipPrice: z.string().optional(),
 })
+
+export const productFormSchema = z.object({
+  name: z.string().min(3, 'Name must be at least 3 characters'),
+  description: z.string().min(3, 'Description must be at least 3 characters').max(400, 'Description must be less than 400 characters'),
+  price: z.string(),
+  contactInfo: z.string(),
+  productCategoryId: z.string(),
+})
