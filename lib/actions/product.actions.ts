@@ -35,7 +35,7 @@ export async function createProduct({ userId, product, path }: CreateProductPara
     const vendor = await User.findById(userId)
     if (!vendor) throw new Error('Vendor not found')
 
-    const newProduct = await Product.create({ ...product, productCategory: product.ProductCategoryId, vendor: userId })
+    const newProduct = await Product.create({ ...product, productCategory: product.productCategoryId, vendor: userId })
     revalidatePath(path)
 
     return JSON.parse(JSON.stringify(newProduct))
@@ -71,7 +71,7 @@ export async function updateProduct({ userId, product, path }: UpdateProductPara
 
     const updatedProduct = await Product.findByIdAndUpdate(
       product._id,
-      { ...product, productCategory: product.ProductCategoryId },
+      { ...product, productCategory: product.productCategoryId },
       { new: true }
     )
     revalidatePath(path)

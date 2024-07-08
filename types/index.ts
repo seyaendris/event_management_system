@@ -179,7 +179,7 @@ export type CreateUserParams = {
         name: string;
         description?: string;
         price: string;
-        ProductCategoryId: string
+        productCategoryId: string
         contactInfo: string,
       }
       path: string
@@ -192,8 +192,8 @@ export type CreateUserParams = {
         name: string;
         description?: string;
         price: string;
-        ProductCategoryId: string
-        includedServices: string,
+        productCategoryId: string
+        contactInfo: string,
       }
       path: string
     }

@@ -50,3 +50,11 @@ export const headerLinks = [
     isVip: false,
     vipPrice: '',
   }
+
+  export const productDefaultValues = {
+    name: '',
+    description: '',
+    price: '',
+    contactInfo: '',
+    productCategoryId: '',
+  }
