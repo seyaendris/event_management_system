@@ -1,4 +1,3 @@
-"use client";
 
 import ProductForm from "@/components/shared/ProductForm";
 import { auth } from "@clerk/nextjs/server";
