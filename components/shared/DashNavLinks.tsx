@@ -11,7 +11,7 @@ import Link from 'next/link';
 const links = [
     {
         name: 'Home',
-        href: '/events/',
+        href: '/events/home',
         icon: AiOutlineHome
     },
     {
@@ -21,12 +21,12 @@ const links = [
     },
     {
         name: 'Events Organized',
-        href: '/events/create',
+        href: '/events/organized',
         icon: MdEvent
     },
     {
         name: 'Tickets Purchased',
-        href: '/events/create',
+        href: '/events/mytickets',
         icon: FaTicketAlt
     },
 
