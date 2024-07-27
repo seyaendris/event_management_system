@@ -44,7 +44,7 @@ const VendorNavItems = () => {
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
-              href="/vendors"
+              href="/packaged"
               className={`hover:text-orange-600 font-medium text-base ${
                 activeLink === "/packages" ? "text-orange-600" : ""
               }`}
@@ -77,11 +77,11 @@ const VendorNavItems = () => {
               <li>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/create/package"
+                    href="/packaged/createpackage"
                     className={`block px-4 py-2 hover:bg-orange-100 text-center font-medium text-gray-700 ${
                       activeLink === "/create/package" ? "text-orange-600" : ""
                     }`}
-                    onClick={() => handleLinkClick("/create/package")}
+                    onClick={() => handleLinkClick("/packaged/createpackage")}
                   >
                     Package
                   </Link>
@@ -91,7 +91,7 @@ const VendorNavItems = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
               href="/profile"
@@ -103,7 +103,7 @@ const VendorNavItems = () => {
               Profile
             </Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
