@@ -2,7 +2,7 @@
 import ProductForm from "@/components/shared/ProductForm";
 import { auth } from "@clerk/nextjs/server";
 
-const CreateProduct = () => {
+const CreatePackage = () => {
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
 
@@ -18,4 +18,4 @@ const CreateProduct = () => {
   );
 };
 
-export default CreateProduct;
+export default CreatePackage;
