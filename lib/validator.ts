@@ -22,3 +22,10 @@ export const productFormSchema = z.object({
   contactInfo: z.string(),
   productCategoryId: z.string(),
 })
+export const packageFormSchema = z.object({
+  name: z.string().min(3, 'Name must be at least 3 characters'),
+  description: z.string().min(3, 'Description must be at least 3 characters').max(400, 'Description must be less than 400 characters'),
+  price: z.string(),
+  includedServices: z.string(),
+  packageCategoryId: z.string(),
+})
