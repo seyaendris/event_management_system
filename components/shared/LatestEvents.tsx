@@ -4,6 +4,7 @@ import { getEventsByUser } from '../../lib/actions/event.actions'
 import { auth } from '@clerk/nextjs/server'
 import Image from 'next/image'
 import { FaSyncAlt } from 'react-icons/fa';
+import { IEvent } from '@/lib/database/models/event.model'
 
 const LatestEvents = async ({ searchParams }: SearchParamProps) => {
     const { sessionClaims } = auth();
@@ -13,7 +14,7 @@ const LatestEvents = async ({ searchParams }: SearchParamProps) => {
     const organizedEvents = await getEventsByUser({ userId, page: eventsPage })
 
     // Check if organizedEvents is defined and has data
-    const eventsData = organizedEvents?.data || [];
+    const eventsData: IEvent[] = organizedEvents?.data || [];
 
     return (
         <div className="flex w-full flex-col md:col-span-4">
@@ -31,7 +32,7 @@ const LatestEvents = async ({ searchParams }: SearchParamProps) => {
                     <div className="flex items-center">
                       <Image
                         src={event.imageUrl}
-                        alt={`${event.name}'s image`}
+                        alt={`${event.title}'s image`}
                         className="mr-4"
                         width={62}
                         height={32}
