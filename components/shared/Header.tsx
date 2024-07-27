@@ -32,11 +32,18 @@ const Header = () => {
                   <MobileNav />
                 </SignedIn>
 
+              
                 <SignedOut>
+                <div className="flex justify-between">
+                <Link className="pr-96 pt-3 font-semibold hover:text-orange-600" href="#events">
+                  Events
+                </Link>
                   <Button asChild className="bg-orange-600 rounded-3xl hover:bg-orange-500" size="lg">
                     <Link href="/sign-in">Login</Link>
                   </Button>
+                  </div>
                 </SignedOut>
+              
 
 
             </div>
