@@ -58,3 +58,10 @@ export const headerLinks = [
     contactInfo: '',
     productCategoryId: '',
   }
+  export const packageDefaultValues = {
+    name: '',
+    description: '',
+    price: '',
+    includedServices: '',
+    packageCategoryId: '',
+  }

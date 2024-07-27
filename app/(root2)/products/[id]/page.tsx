@@ -1,8 +1,5 @@
-import CheckoutButton from '@/components/shared/CheckoutButton';
-import Collection from '@/components/shared/Collection';
-import { getEventById, getRelatedEventsByCategory } from '@/lib/actions/event.actions'
+
 import { getProductById, getRelatedProductsByCategory } from '@/lib/actions/product.actions';
-import { formatDateTime } from '@/lib/utils';
 import { SearchParamProps } from '@/types'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +15,7 @@ const ProductDetails = async ({ params: { id }, searchParams }: SearchParamProps
 
   return (
     <>
-    <section className="flex justify-center bg-orange-50 bg-dotted-pattern bg-contain">
+    <section className="wrapper mt-16 rounded-3xl border-[1px] shadow-sm flex justify-center bg-orange-50 bg-dotted-pattern bg-contain">
       <div className="grid grid-cols-1 md:flex md:flex-col 2xl:max-w-7xl md:wrapper">
         
 
@@ -52,7 +49,7 @@ const ProductDetails = async ({ params: { id }, searchParams }: SearchParamProps
         
 
         <div className="p-regular-20 flex items-center gap-3">
-            <Image src="/assets/icons/location.svg" alt="location" width={32} height={32} />
+            {/* <Image src="/assets/icons/location.svg" alt="location" width={32} height={32} /> */}
             <p className="p-medium-16 lg:p-regular-20">{product.contactInfo}</p>
         </div>
         </div>
@@ -67,10 +64,10 @@ const ProductDetails = async ({ params: { id }, searchParams }: SearchParamProps
     </section>
 
     {/* PRODUCTS with the same category */}
-    <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+    {/* <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
       <h2 className="h2-bold">Related Products</h2>
 
-      {/* <Collection 
+      <Collection 
           data={relatedEvents?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
@@ -78,8 +75,8 @@ const ProductDetails = async ({ params: { id }, searchParams }: SearchParamProps
           limit={3}
           page={searchParams.page as string}
           totalPages={relatedEvents?.totalPages}
-        /> */}
-    </section>
+        />
+    </section> */}
     </>
   )
 }
