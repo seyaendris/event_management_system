@@ -91,19 +91,7 @@ const VendorNavItems = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link
-              href="/profile"
-              className={`hover:text-orange-600 font-medium text-base ${
-                activeLink === "/profile" ? "text-orange-600" : ""
-              }`}
-              onClick={() => handleLinkClick("/profile")}
-            >
-              Profile
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem> */}
+       
       </NavigationMenuList>
     </NavigationMenu>
   );
