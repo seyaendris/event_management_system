@@ -22,7 +22,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
     <>
       <section className="relative bg-gradient-to-b from-orange-100 bg-contain py-5 md:py-10">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero3.jpg')" }}>
-          <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black opacity-60"></div> {/* Dark overlay */}
         </div>
         <div className="relative wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 text-white"> {/* Adjust text color to white */}
           <div className="flex flex-col justify-center gap-8 z-10">
