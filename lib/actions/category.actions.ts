@@ -59,9 +59,9 @@ export const getAllPackageCategories = async () => {
   try {
     await connectToDatabase();
 
-    const categories = await PackageCategory.find();
+    const packageCategories = await PackageCategory.find();
 
-    return JSON.parse(JSON.stringify(categories));
+    return JSON.parse(JSON.stringify(packageCategories));
   } catch (error) {
     handleError(error)
   }
@@ -71,9 +71,9 @@ export const getAllProductCategories = async () => {
   try {
     await connectToDatabase();
 
-    const categories = await ProductCategory.find();
+    const productCategories = await ProductCategory.find();
 
-    return JSON.parse(JSON.stringify(categories));
+    return JSON.parse(JSON.stringify(productCategories));
   } catch (error) {
     handleError(error)
   }

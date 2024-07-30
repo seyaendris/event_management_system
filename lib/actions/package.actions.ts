@@ -84,7 +84,7 @@ export async function updatePackage({ userId, packages, path }: UpdatePackagePar
 }
 
 // DELETE
-export async function deleteEvent({ packageId, path }: DeletePackageParams) {
+export async function deletePackage({ packageId, path }: DeletePackageParams) {
   try {
     await connectToDatabase()
 
