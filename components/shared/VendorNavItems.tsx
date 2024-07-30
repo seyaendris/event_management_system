@@ -25,7 +25,7 @@ const VendorNavItems = () => {
   };
 
   return (
-    <NavigationMenu>
+    <NavigationMenu className="z-50">
       <NavigationMenuList>
         <NavigationMenuItem className="pr-3">
           <NavigationMenuLink asChild>
