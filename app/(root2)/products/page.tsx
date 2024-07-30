@@ -20,25 +20,25 @@ export default async function Products({ searchParams }: SearchParamProps) {
 
   return (
     <>
-      <section className="relative bg-gradient-to-b from-green-100 bg-contain py-5 md:py-10">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/assets/images/hero3.jpg')" }}>
-          <div className="absolute inset-0 bg-black opacity-60"></div>
+      <section className="relative bg-gradient-to-b from-green-100 bg-contain py-5 md:py-10 h-96">
+        <div className="wrapper mt-5 absolute inset-0 bg-cover bg-center h-auto rounded-3xl" style={{ backgroundImage: "url('/assets/images/producthero.jpg')" }}>
+          <div className="absolute inset-0 bg-black opacity-30 rounded-3xl"></div>
         </div>
-        <div className="relative wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 text-white">
+        <div className="relative wrapper grid grid-cols-1 gap-5 md:grid-cols-1 text-center 2xl:gap-0 text-white">
           <div className="flex flex-col justify-center gap-8 z-10">
-            <h1 className="h1-bold text-green-400">Discover Amazing Products!</h1>
-            <p className="p-regular-20 md:p-regular-24 text-gray-200">Find the best products and deals right here.</p>
-            <Button size="lg" asChild className="button w-full sm:w-fit bg-green-600 hover:bg-green-500">
+            <h1 className="h1-bold text-green-400 bg-clip-text text-transparent animate-pulse bg-gradient-to-r from-green-600 to bg-green-50">Discover Amazing Products!</h1>
+            
+            {/* <Button size="lg" asChild className="button w-full sm:w-fit bg-green-600 hover:bg-green-500">
               <Link href="#products">
                 Explore Now
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
 
-      <section id="products" className="wrapper my-8 flex flex-col gap-8 md:gap-12 bg-neutral-50">
-        <h2 className="h2-bold">Trusted by Thousands of Customers</h2>
+      <section id="products" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold">Find the best products and deals right here</h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
