@@ -36,7 +36,7 @@ const Search = ({ placeholder = 'Search title...' }: { placeholder?: string }) =
   }, [query, searchParams, router])
 
   return (
-    <div className="flex-center min-h-[54px] w-full overflow-hidden rounded-lg bg-primary-50 px-4 py-2">
+    <div className="flex-center min-h-[54px] w-full overflow-hidden rounded-lg bg-primary-50 px-4 py-2 border-[1px] border-orange-100 shadow-sm transition-transform duration-300 hover:scale-105">
       <Image src="/assets/icons/search.svg" alt="search" width={24} height={24} />
       <Input 
         type="text"
