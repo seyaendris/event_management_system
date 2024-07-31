@@ -1,4 +1,8 @@
 <img width="946" alt="Screenshot 2024-07-31 150522" src="https://github.com/user-attachments/assets/3889c2ac-daf7-451f-9a7f-01f53563e9a7">
+<img width="697" alt="Screenshot 2024-07-31 150631" src="https://github.com/user-attachments/assets/8ed6846f-4c64-448a-8e97-f23e099566d8">
+![Brown Aesthetic Nature Autumn Photo Collage](https://github.com/user-attachments/assets/4defdb36-ca9c-4854-a4c1-d22bac36e68b)
+
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
